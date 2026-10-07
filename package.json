@@ -1,0 +1,31 @@
+{
+  "name": "codyteam",
+  "version": "2.0.0",
+  "description": "Codyteam Autonomous Multi-Agent Swarm (Double Diamond x ARIZ, Evidence-Gated Edition)",
+  "main": "bin/codyteam.mjs",
+  "bin": {
+    "codyteam": "./bin/codyteam.mjs"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/test-hooks.mjs",
+    "watchdog": "node scripts/swarm-watchdog.mjs",
+    "mcp": "node mcp/swarm-mcp.js"
+  },
+  "keywords": [
+    "codyteam",
+    "ai-agents",
+    "swarm",
+    "openspec",
+    "superpowers",
+    "ariz",
+    "triz",
+    "zero-trust",
+    "tdd"
+  ],
+  "author": "tody-agent",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

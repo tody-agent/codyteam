@@ -1,0 +1,18 @@
+{
+  "10-core-engineer": {
+    "gate_blocks": 32,
+    "fabrication_flags": 8,
+    "escalations": 8
+  },
+  "02-rootcause-contradiction-analyst": {
+    "gate_blocks": 9,
+    "done": 8
+  },
+  "14-automated-visual-sentinel": {
+    "gate_blocks": 3,
+    "done": 3
+  },
+  "07-strategic-planner": {
+    "gate_blocks": 3
+  }
+}

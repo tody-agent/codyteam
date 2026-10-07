@@ -1,0 +1,13 @@
+{
+  "02-rootcause-contradiction-analyst": ["04-openspec-architect"],
+  "04-openspec-architect": ["03-jtbd-market-researcher"],
+  "03-jtbd-market-researcher": ["05-concept-prototyper"],
+  "05-concept-prototyper": ["08-momtest-ux-sentinel"],
+  "08-momtest-ux-sentinel": ["06-opendesign-ui", "07-strategic-planner"],
+  "07-strategic-planner": ["13-adversarial-plan-auditor"],
+  "13-adversarial-plan-auditor": ["09-tdd-architect"],
+  "09-tdd-architect": ["10-core-engineer"],
+  "10-core-engineer": ["11-forensic-test-gate"],
+  "11-forensic-test-gate": ["14-automated-visual-sentinel"],
+  "12-systematic-debugger": ["11-forensic-test-gate"]
+}

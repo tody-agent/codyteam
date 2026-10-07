@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+*.log
+.audit/
+.swarm/queue/*
+!.swarm/queue/.gitkeep
+.swarm/reports/*
+!.swarm/reports/.gitkeep
+.swarm/events.jsonl
+.swarm/scoreboard.json

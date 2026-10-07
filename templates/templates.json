@@ -1,0 +1,94 @@
+{
+  "02-rootcause-contradiction-analyst": {
+    "required_artifacts": [".swarm/TRIZ-CARD.json", "ASSUMPTIONS.md"],
+    "validators": ["triz-card"],
+    "acceptance": [
+      {"id": "AC1", "text": "5 Whys tree reaches a TC (not just a cause)"},
+      {"id": "AC2", "text": "Motivator-conflict matrix with >=1 conflicting pair"},
+      {"id": "AC3", "text": "TC intensified to an extreme"}
+    ]
+  },
+  "03-jtbd-market-researcher": {
+    "required_artifacts": ["research.md"],
+    "acceptance": [
+      {"id": "AC1", "text": "Cross-industry analogs mapped to PC separation principles"},
+      {"id": "AC2", "text": "Mom Test past-behavior evidence recorded with URLs fetched"}
+    ]
+  },
+  "04-openspec-architect": {
+    "required_artifacts": [".swarm/TRIZ-CARD.json", "specs/INDEX.md"],
+    "validators": ["triz-card"],
+    "acceptance": [
+      {"id": "AC1", "text": "OZ and OT specified with concrete location"},
+      {"id": "AC2", "text": "SFR scan completed in ARIZ order mapped to codebase"},
+      {"id": "AC3", "text": "IFR-1 formulated and strengthened with zero new tables/deps"},
+      {"id": "AC4", "text": "PC derived at component/data level; file boundaries and interfaces declared"}
+    ]
+  },
+  "05-concept-prototyper": {
+    "required_artifacts": ["CONCEPTS.md"],
+    "acceptance": [
+      {"id": "AC1", "text": ">=3 ASCII concepts using distinct separation principles"},
+      {"id": "AC2", "text": "One pure IFR concept where step/screen does not exist"}
+    ]
+  },
+  "06-opendesign-ui": {
+    "acceptance": [
+      {"id": "AC1", "text": "UI components adhere to CapyInn visual design tokens (#FFFFFF, #FAFAFA, #981F1F)"},
+      {"id": "AC2", "text": "Native dialog and popover primitives used"}
+    ]
+  },
+  "07-strategic-planner": {
+    "required_artifacts": ["PLAN.md"],
+    "acceptance": [
+      {"id": "AC1", "text": "Atomic steps <100 diff lines / 2-5 min with test per step and 0 placeholders"},
+      {"id": "AC2", "text": "Files block, Consumes/Produces interfaces, and SFR rung declared per task"},
+      {"id": "AC3", "text": "Planner 3-point self-review checklist executed and recorded"}
+    ]
+  },
+  "08-momtest-ux-sentinel": {
+    "acceptance": [
+      {"id": "AC1", "text": "Hard UX metrics measured table recorded per screen"},
+      {"id": "AC2", "text": "No relaxed metrics: conflicting metrics converted to PC and returned to 05"}
+    ]
+  },
+  "09-tdd-architect": {
+    "acceptance": [
+      {"id": "AC1", "text": "Happy, edge, and error tests written and failing for expected reason (RED)"},
+      {"id": "AC2", "text": "Frozen test sha256 hashes generated and recorded in ticket"}
+    ]
+  },
+  "10-core-engineer": {
+    "verify_cmd": "npm test && npm run typecheck && npm run verify:money",
+    "acceptance": [
+      {"id": "AC1", "text": "All frozen RED tests pass"},
+      {"id": "AC2", "text": "Declared PC/separation/resource before coding (L2 only, else deferred n/a)"}
+    ]
+  },
+  "11-forensic-test-gate": {
+    "verify_cmd": "npm test && npm run typecheck && npm run lint && npm run build && npm run verify:money",
+    "acceptance": [
+      {"id": "AC1", "text": "Financial queries exclude bookings.status='voided' (cite file:line)"},
+      {"id": "AC2", "text": "All UI writes go through invokeCommand (cite grep command)"}
+    ]
+  },
+  "12-systematic-debugger": {
+    "acceptance": [
+      {"id": "AC1", "text": "Minimal reproduction test created"},
+      {"id": "AC2", "text": "Root cause resolved at source with mini-ARIZ; no symptoms moved"}
+    ]
+  },
+  "13-adversarial-plan-auditor": {
+    "acceptance": [
+      {"id": "AC1", "text": "Verdict pass|reject with defects; IFR element count reported"},
+      {"id": "AC2", "text": "Zero-placeholder scan and interface completeness verified"}
+    ]
+  },
+  "14-automated-visual-sentinel": {
+    "required_artifacts": ["HANDOVER.md"],
+    "acceptance": [
+      {"id": "AC1", "text": "9 screens patrolled on port 1420 with screenshots saved to .audit/screenshots/"},
+      {"id": "AC2", "text": "Zero visual regression defects; triz-ledger updated"}
+    ]
+  }
+}

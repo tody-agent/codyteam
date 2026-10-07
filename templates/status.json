@@ -1,0 +1,86 @@
+{
+  "activePhase": "phase-01-core",
+  "currentStep": 4,
+  "stepName": "Chốt Plan",
+  "updatedAt": "2026-10-07T08:41:09.154Z",
+  "agents": [
+    {
+      "id": "01-coordinator",
+      "name": "Swarm Coordinator",
+      "role": "Master Orchestrator",
+      "status": "active"
+    },
+    {
+      "id": "02-openspec-architect",
+      "name": "OpenSpec Architect",
+      "role": "Spec & Documentation Librarian",
+      "status": "idle"
+    },
+    {
+      "id": "03-deep-researcher",
+      "name": "Deep Researcher",
+      "role": "Codebase & Dependency Researcher",
+      "status": "idle"
+    },
+    {
+      "id": "04-strategic-planner",
+      "name": "Strategic Planner",
+      "role": "Superpowers Task Planner",
+      "status": "idle"
+    },
+    {
+      "id": "05-plan-auditor",
+      "name": "Plan Auditor",
+      "role": "Adversarial Plan Reviewer",
+      "status": "idle"
+    },
+    {
+      "id": "06-opendesign-ui",
+      "name": "OpenDesign Specialist",
+      "role": "MCP OpenDesign UI Generator",
+      "status": "idle"
+    },
+    {
+      "id": "07-design-auditor",
+      "name": "Design Auditor",
+      "role": "UI/UX & Accessibility Reviewer",
+      "status": "idle"
+    },
+    {
+      "id": "08-tdd-architect",
+      "name": "TDD Architect",
+      "role": "Red-Green-Refactor Test Author",
+      "status": "idle"
+    },
+    {
+      "id": "09-core-engineer",
+      "name": "Core Engineer",
+      "role": "Implementation Specialist",
+      "status": "idle"
+    },
+    {
+      "id": "10-test-gate",
+      "name": "Test Gate Sentinel",
+      "role": "Verification & CI/CD Gatekeeper",
+      "status": "idle"
+    },
+    {
+      "id": "11-systematic-debugger",
+      "name": "Systematic Debugger",
+      "role": "Root-Cause & Self-Healing Fixer",
+      "status": "idle"
+    },
+    {
+      "id": "12-handover-specialist",
+      "name": "Handover Specialist",
+      "role": "UI/Functional Auditor & Delivery",
+      "status": "idle"
+    }
+  ],
+  "locks": {
+    "planLocked": true,
+    "designLocked": false,
+    "codeVerified": false,
+    "handoverDone": false
+  }
+}
