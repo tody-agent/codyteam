@@ -1,6 +1,6 @@
 {
   "name": "codyteam",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Codyteam Autonomous Multi-Agent Swarm (Double Diamond x ARIZ, Evidence-Gated Edition)",
   "main": "bin/codyteam.mjs",
   "bin": {
@@ -10,6 +10,7 @@
   "scripts": {
     "test": "node scripts/test-hooks.mjs",
     "watchdog": "node scripts/swarm-watchdog.mjs",
+    "monitor": "node bin/codyteam.mjs monitor",
     "mcp": "node mcp/swarm-mcp.js"
   },
   "keywords": [

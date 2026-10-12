@@ -1,6 +1,6 @@
 {
   "name": "codyteam",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Autonomous 14-Agent Swarm with Zero-Trust Tri-Proof Gates, ARIZ Problem Solving, and Superpowers Planning Rigor",
   "skills": ["skills/codyteam"],
   "mcpServers": {

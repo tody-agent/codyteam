@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { spawnSync } from 'node:child_process';
+import { spawnSync, spawn } from 'node:child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -85,6 +85,27 @@ switch (command) {
     break;
   }
 
+  case 'monitor': {
+    const isLaunch = args.includes('--launch') || args.includes('-l');
+    const monitorScript = path.join(ROOT_DIR, 'scripts', 'codyteam-monitor.py');
+    const remainingArgs = args.slice(1);
+    if (isLaunch) {
+      const launcherScript = path.join(ROOT_DIR, 'scripts', 'launch-terminal.sh');
+      const passthrough = remainingArgs.filter(a => a !== '--launch' && a !== '-l');
+      const child = spawn(launcherScript, [monitorScript, ...passthrough], {
+        stdio: 'ignore',
+        detached: true
+      });
+      child.unref();
+      console.log('✓ [Codyteam Swarm Live Monitor] Đã khởi động trên cửa sổ Terminal riêng.');
+      process.exit(0);
+    } else {
+      const result = spawnSync('python3', [monitorScript, ...remainingArgs], { stdio: 'inherit' });
+      process.exit(result.status || 0);
+    }
+    break;
+  }
+
   case 'version':
   case '-v':
   case '--version': {
@@ -100,6 +121,7 @@ Codyteam Multi-Agent Swarm CLI
 
 Usage:
   codyteam init [directory]   Initialize Codyteam swarm into a repository
+  codyteam monitor [--launch] Start or launch the Live Swarm Monitor Dashboard
   codyteam test               Run the Zero-Trust hook test suite
   codyteam watchdog           Start the autonomous queue watchdog daemon
   codyteam version            Print Codyteam version
